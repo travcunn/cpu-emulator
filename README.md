@@ -6,5 +6,7 @@ Experimental CPU emulator written in C
 - Build a compiler
 - Build a unix-like operating system
 - Build a filesystem
+- Build a network stack
 - Implement Unix tools usually found in /bin (ls, cat, etc)
+- Implement a simple web server
 - Run a CPU emulator inside another emulator
