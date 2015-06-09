@@ -4,6 +4,7 @@
 #define MEMORY_SIZE 1000
 #define OPCODE_SIZE 2
 #define OPERAND_SIZE 2
+#define DUMP_MEMORY_LINEWRAP 20
 
 // Registers
 int accumulator;
@@ -120,7 +121,8 @@ void dumpMemory()
         // Display memory value
         printf("%.4d ", memory[i]);
 
-        if ((i+1) % 20 == 0)
+        // Wrap every 20 lines
+        if ((i+1) % DUMP_MEMORY_LINEWRAP == 0)
         {
             printf("\n");
         }
