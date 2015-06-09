@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 2
+
+#define MEMORY_SIZE 1000
+#define OPCODE_SIZE 2
+#define OPERAND_SIZE 2
 
 // Registers
 int accumulator;
@@ -10,13 +13,13 @@ int opCode;
 int operand;
 
 // Memory
-int memory [1000];
+int memory [MEMORY_SIZE];
 
 // Write a word from a specific location in memory to the terminal
 void write(int location)
 {
-    char opcode[SIZE];
-    char operand[SIZE];
+    char opcode[OPERAND_SIZE];
+    char operand[OPCODE_SIZE];
     printf("%.4d\n", memory[location]);
 }
 
@@ -100,12 +103,38 @@ void halt()
     exit(0);
 }
 
+// Dumps registers and memory to the the terminal
+void dumpMemory()
+{
+    // Display Registers
+    printf("accumulator: %.4d\n", accumulator);
+    printf("instructionCounter: %.4d\n", instructionCounter);
+    printf("instructionRegister: %.4d\n", instructionRegister);
+    printf("opCode: %.4d\n", opCode);
+    printf("operand: %.4d\n", operand);
+    printf("\n");
+
+    int i = 0;
+    for (i; i<MEMORY_SIZE; i++)
+    {
+        // Display memory value
+        printf("%.4d ", memory[i]);
+
+        if ((i+1) % 20 == 0)
+        {
+            printf("\n");
+        }
+    }
+}
+
 int main(int argc, const char* argv[] )
 {
+    dumpMemory();
     read(1);
     read(2);
     load(1);
     multiply(2);
     store(3);
     write(3);
+    dumpMemory();
 }
