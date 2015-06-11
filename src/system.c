@@ -86,12 +86,6 @@ system_t *create_system(FILE *file)
     return system;
 }
 
-// Initialize the system
-void init_system(system_t *system)
-{
-	init_cpu(system->cpu);
-}
-
 // Destroy the system and free its memory
 void destroy_system(system_t *system)
 {
@@ -109,15 +103,13 @@ void destroy_system(system_t *system)
 cpu_t *create_cpu()
 {
     cpu_t *cpu = calloc(1, sizeof(cpu_t));
-    return cpu;
-}
 
-void init_cpu(cpu_t *cpu)
-{
     // Initialize the CPU registers
     cpu->A = 0;
     cpu->I = 0;
     cpu->PC = PROGRAM_START;
+
+    return cpu;
 }
 
 // Destroy the CPU and free its memory

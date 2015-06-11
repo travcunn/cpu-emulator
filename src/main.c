@@ -64,8 +64,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    init_system(system);
-
     //TODO Create execution loop here
 
     if(system)

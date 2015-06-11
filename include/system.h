@@ -24,11 +24,9 @@ typedef struct system_t {
 } system_t;
 
 cpu_t *create_cpu();
-void init_cpu(cpu_t *cpu);
 void destroy_cpu(cpu_t *cpu);
 
 system_t *create_system(FILE *file);
-void init_system(system_t *system);
 void destroy_system(system_t *system);
 
 void handle_opcode(system_t *system, uint16_t opcode);
