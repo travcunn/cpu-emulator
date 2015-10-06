@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-c -std=c99 -fdiagnostics-color=always
+CFLAGS=-c -std=c99 -fdiagnostics-color=always -Wall -Wextra -Wno-missing-braces -Wno-missing-field-initializers
 LDFLAGS=-L/usr/lib/x86_64-linux-gnu
 INCLUDE=-I/usr/include/x86_64-linux-gnu
 
