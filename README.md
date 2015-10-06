@@ -1,4 +1,6 @@
 # cpu-emulator
+[![Build Status](https://travis-ci.org/travcunn/cpu-emulator.svg)](https://travis-ci.org/travcunn/cpu-emulator)
+
 Experimental CPU emulator written in C
 
 #### Goals
