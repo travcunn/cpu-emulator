@@ -1,7 +1,6 @@
 language: c
-env: GCC_VERSION=5
 sudo: false
 compiler:
-    - gcc
+    - gcc-5
 script:
     make
