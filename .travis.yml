@@ -1,4 +1,5 @@
 language: c
+env: GCC_VERSION=5
 sudo: false
 compiler:
     - gcc
