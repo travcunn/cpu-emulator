@@ -3,8 +3,8 @@ language: c
 compiler:
     - gcc-5
 script:
-    sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc
-    make
+    - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc
+    - make
 
 addons:
   apt:
