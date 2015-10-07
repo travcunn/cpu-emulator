@@ -1,6 +1,17 @@
-language: c
 sudo: false
+
+language: c
 compiler:
     - gcc-5
 script:
     make
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-5
+
+cache:
+  apt: true
