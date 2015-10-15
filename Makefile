@@ -5,7 +5,7 @@ INCLUDE=-I/usr/include/x86_64-linux-gnu
 
 SOURCES=src/main.c src/system.c src/opcodes.c
 OBJECTS=$(SOURCES:.c=.o)
-EXECUTABLE=bin/em
+EXECUTABLE=em
 
 all: $(SOURCES) $(EXECUTABLE)
 
